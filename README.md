@@ -18,3 +18,16 @@ Lista de dependências:
 
 _PS: Para facilitar o processo de configuração no estudo, é possível utilizar o create-react-app, que já vem com todas as dependências instaladas._
  
+## Test Against Different React Releases with Enzyme
+
+Alguns releases do React exigem alguns setups diferentes para o Enzyme.
+
+Neste caso, se fez necessário instalar a dependência `enzyme-adapter-react-16`. E configurar no arquivo de test o uso do Adapter.
+
+```js
+...
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
