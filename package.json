@@ -1,0 +1,32 @@
+{
+  "name": "learning-jest-with-enzyme",
+  "version": "1.0.0",
+  "description": "Learning how to test React Components with Enzyme and Jest",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^26.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianoPadilha/learning-jest-with-enzyme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulianoPadilha/learning-jest-with-enzyme/issues"
+  },
+  "homepage": "https://github.com/JulianoPadilha/learning-jest-with-enzyme#readme"
+}
