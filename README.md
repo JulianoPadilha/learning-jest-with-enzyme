@@ -54,3 +54,9 @@ Output no terminal
   <Test />
 </div>
 ```
+
+## Find Nodes from a Shallow Rendered Component
+
+Para encontrar nós dentro de um componente, podemos utilizar o `.find` combinado com outros métodos como `exists()`, `children()`, `text()` e `hasClass`, etc..
+
+Com isso podemos testar se os elementos renderizados estão corretos.

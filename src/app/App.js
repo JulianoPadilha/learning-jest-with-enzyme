@@ -6,7 +6,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>React App for testing with Jest and Ezyme</h1>
+        <h1 className="app">React App for testing with Jest and Ezyme</h1>
+        <ul>
+          <li>Test 1</li>
+          <li>Test 2</li>
+          <li>Test 3</li>
+        </ul>
         <Test />
       </div>
     )
