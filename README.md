@@ -72,3 +72,20 @@ Existem diferentes tipos validos de seletores.
 * por combinação de todos | ex: ```expect(wrapper.find('a[href=""]').text()).toBe('Welcome')```
 * por seletores contextuais | ex: ```expect(wrapper.find('.title > . subtitle').text()).toBe('Welcome')```, aleem de >, + e ~
 * por props | ex: ```expect(wrapper.find('[text="Some title"]').text()).toBe('Welcome')```
+
+## Test Enzyme Rendered Components with Jest Snapshots
+
+Precisamos instalar e importar a dependência `enzyme-to-json` para termos um snapshot mais limpo e legível.
+
+`npm install --save-dev enzyme-to-json`
+
+```js 
+import toJson from 'enzyme-to-json'
+```
+
+```js
+it('matches the snapshot', () => {
+  const wrapper = render(<App />);
+  expect(toJson(wrapper)).toMatchSnapshot();
+});
+```

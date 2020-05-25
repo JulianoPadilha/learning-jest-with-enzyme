@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> matches the snapshot 1`] = `
+<div>
+  <h1
+    class="app"
+  >
+    React App for testing with Jest and Ezyme
+  </h1>
+  <ul>
+    <li>
+      Test 1
+    </li>
+    <li>
+      Test 2
+    </li>
+    <li>
+      Test 3
+    </li>
+  </ul>
+</div>
+`;

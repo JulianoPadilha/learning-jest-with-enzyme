@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const Test = () => <div>Testing</div>
+// const Test = () => <div>Testing</div>
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
           <li>Test 2</li>
           <li>Test 3</li>
         </ul>
-        <Test />
+        {/* <Test /> */}
       </div>
     )
   }

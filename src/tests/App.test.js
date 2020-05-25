@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../app/App';
-import { configure, shallow } from 'enzyme';
+import { configure, shallow, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import toJson from 'enzyme-to-json';
 
 configure({ adapter: new Adapter() });
 
@@ -18,5 +19,10 @@ describe('<App />', () => {
     expect(wrapper.find('.app').exists()).toBe(true);
     expect(wrapper.find('ul').children().length).toBe(3);
     expect(wrapper.find('h1').text()).toBe('React App for testing with Jest and Ezyme');
+  });
+
+  it('matches the snapshot', () => {
+    const wrapper = render(<App />);
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
