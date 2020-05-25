@@ -60,3 +60,15 @@ Output no terminal
 Para encontrar nós dentro de um componente, podemos utilizar o `.find` combinado com outros métodos como `exists()`, `children()`, `text()` e `hasClass`, etc..
 
 Com isso podemos testar se os elementos renderizados estão corretos.
+
+## Understand the Different Accepted Selectors in Enzyme
+
+Existem diferentes tipos validos de seletores.
+
+* por elemento | ex: ```expect(wrapper.find('h1').text()).toBe('Welcome')```
+* por classe | ex: ```expect(wrapper.find('.title').text()).toBe('Welcome')```
+* por ID | ex: ```expect(wrapper.find('#title').text()).toBe('Welcome')```
+* por atributo | ex: ```expect(wrapper.find('[href=""]').text()).toBe('Welcome')```
+* por combinação de todos | ex: ```expect(wrapper.find('a[href=""]').text()).toBe('Welcome')```
+* por seletores contextuais | ex: ```expect(wrapper.find('.title > . subtitle').text()).toBe('Welcome')```, aleem de >, + e ~
+* por props | ex: ```expect(wrapper.find('[text="Some title"]').text()).toBe('Welcome')```
