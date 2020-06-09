@@ -20,3 +20,47 @@ exports[`<App /> matches the snapshot 1`] = `
   </ul>
 </div>
 `;
+
+exports[`<App /> mount rendering matches the snapshot 1`] = `
+<App>
+  <div>
+    <h1
+      className="app"
+    >
+      React App for testing with Jest and Ezyme
+    </h1>
+    <ul>
+      <li>
+        Test 1
+      </li>
+      <li>
+        Test 2
+      </li>
+      <li>
+        Test 3
+      </li>
+    </ul>
+  </div>
+</App>
+`;
+
+exports[`<App /> shallow rendering matches the snapshot 1`] = `
+<div>
+  <h1
+    class="app"
+  >
+    React App for testing with Jest and Ezyme
+  </h1>
+  <ul>
+    <li>
+      Test 1
+    </li>
+    <li>
+      Test 2
+    </li>
+    <li>
+      Test 3
+    </li>
+  </ul>
+</div>
+`;

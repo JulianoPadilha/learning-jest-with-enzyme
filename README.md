@@ -110,3 +110,11 @@ Para modificar o valor de uma prop, podemos usar `setProps`, que recebe um objet
 ...
 wrapper.setProps({ hide: true });
 ```
+
+## Fully Render React Components with Enzyme
+
+Full DOM rendering é ideal para casos onde temos componentes que interagem com a DOM API ou requerem os ciclos de vida do React.
+
+Para utilizar o método `mount`do Enzyme precisamos instalar a lib `jsdom`.
+
+O método `mount` tem dois parametros adicionais de configuração: `context` (objeto de contexto que queremos passar para o componente) e `attachTo` (quando queremos "acoplar" nosso componente com um elemento específico do DOM). 

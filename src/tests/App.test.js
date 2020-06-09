@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App, { Link } from '../app/App';
-import { configure, shallow, render } from 'enzyme';
+import { configure, shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 
 configure({ adapter: new Adapter() });
 
-describe('<App />', () => {
+describe('<App /> shallow rendering', () => {
   it('should render App', () => {
     const wrapper = shallow(<App />, { context: {}, disableLifecycleMethods: true });
     console.log(wrapper.debug());
