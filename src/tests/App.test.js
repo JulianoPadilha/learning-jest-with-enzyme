@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../app/App';
+import App, { Link } from '../app/App';
 import { configure, shallow, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
@@ -26,3 +26,28 @@ describe('<App />', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
+
+describe('<Link />', () => {
+  it('link component accepts address prop', () => {
+    const wrapper = shallow(<Link address='www.google.com' />);
+    // console.log(wrapper.instance());
+    expect(wrapper.instance().props.address).toBe('www.google.com');
+  });
+
+  it('a tag node renders href correctly', () => {
+    const wrapper = shallow(<Link address='www.google.com' />);
+    expect(wrapper.props().href).toBe('www.google.com');
+  });
+
+  it('returns null with true hide prop', () => {
+    const wrapper = shallow(<Link hide={false} />);
+    expect(wrapper.find('a').length).toBe(1);
+  });
+
+  it('returns null with true hide prop', () => {
+    const wrapper = shallow(<Link hide={false} />)
+    expect(wrapper.find('a').length).toBe(1);
+    wrapper.setProps({ hide: true });
+    expect(wrapper.get(0)).toBeNull();
+  });
+})

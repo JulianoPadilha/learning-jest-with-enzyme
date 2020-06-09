@@ -89,3 +89,24 @@ it('matches the snapshot', () => {
   expect(toJson(wrapper)).toMatchSnapshot();
 });
 ```
+
+## Test React Component Props with Enzyme and Jest
+
+Quando testamos props de componentes com o Enzyme, é importante entendermos se queremos testar a instância atual do componente ou se queremos testar o retornado na tag html.
+
+Exemplo de instância com a prop `address`: 
+```js
+<Link address='www.google.com' />
+```
+
+Exemplo de propridade da tag, no caso o `href`:
+```js
+<a href={this.props.address}>Click</a>
+```
+
+Para modificar o valor de uma prop, podemos usar `setProps`, que recebe um objeto com o novo valor da prop que será passada ao componente.
+
+```js
+...
+wrapper.setProps({ hide: true });
+```
