@@ -25,6 +25,14 @@ describe('<App /> shallow rendering', () => {
     const wrapper = render(<App />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
+
+  it('on button click changes p text', () => {
+    const wrapper = shallow(<App />);
+    const button = wrapper.find('button');
+    expect(wrapper.find('.button-state').text()).toBe('No!');
+    button.simulate('click');
+    expect(wrapper.find('.button-state').text()).toBe('Yes!');
+  });
 });
 
 describe('<Link />', () => {

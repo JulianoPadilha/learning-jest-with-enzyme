@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 // const Test = () => <div>Testing</div>
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      on: false
+    }
+  };
+
   render() {
     return (
       <div>
@@ -12,6 +19,8 @@ class App extends Component {
           <li>Test 2</li>
           <li>Test 3</li>
         </ul>
+        <p className='button-state'>{this.state.on ? 'Yes!' : 'No!'}</p>
+        <button onClick={() => this.setState({on: true})}>Click</button>
         {/* <Test /> */}
       </div>
     )

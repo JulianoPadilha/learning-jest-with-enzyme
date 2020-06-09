@@ -118,3 +118,15 @@ Full DOM rendering é ideal para casos onde temos componentes que interagem com 
 Para utilizar o método `mount`do Enzyme precisamos instalar a lib `jsdom`.
 
 O método `mount` tem dois parametros adicionais de configuração: `context` (objeto de contexto que queremos passar para o componente) e `attachTo` (quando queremos "acoplar" nosso componente com um elemento específico do DOM). 
+
+## Test Simulated Event Handlers with Enzyme
+
+Às vezes nossos componentes usam manipuladores de eventos para atualizar o estado. Com o Enzyme conseguimos simular esses eventos utilizando o método `simulate`.
+
+```js
+button.simulate('click')
+```
+
+```js
+input.simulate('change', {currentTarget: {value: 'Juliano'}})
+```
